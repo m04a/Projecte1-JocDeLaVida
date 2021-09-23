@@ -1,0 +1,25 @@
+body{
+	background-color:#000000;
+}
+h1{
+	color:#ffffff;
+	text-align:center;
+	margin-top:5%;
+	font-family: 'Droid Sans';
+}
+h3{
+	color:#ffffff;
+	text-align:center;
+	margin-top:3%;
+	font-family: 'Droid Sans';
+}
+p{
+	color:#ffffff;
+	text-align:center;
+	font-family: 'Droid Sans';
+}
+h2{
+	color:#ffffff;
+	text-align:center;
+	font-family: 'Droid Sans';
+}
