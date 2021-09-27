@@ -14,10 +14,9 @@
 
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
- <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+ <script type="text/javascript" src="script.js"></script>
 
 </head>
 
@@ -31,9 +30,33 @@
  en canvi si té 4 o més veins morirà de sobre població. <br>
 Per jugar simplement has posar les dimensions del univers.
  <p/>
- <h2>DIMENSIONS</h2>
+
+ <div id=dimension>
+  <h2>DIMENSIONS</h2>
+ <div class="inline">
  <p>X: <input type="text" name="GrandariaX" size="2" pattern ="[0-9]+"></p>
- <p>Y: <input type="text" name="GrandariaX" size="2" pattern ="[0-9]+"></p>
+ </div>
+  <div class="inline">
+ <p>Y: <input type="text" name="GrandariaY" size="2" pattern ="[0-9]+"></p>
+</div>
+	
+<!-- <h2>NªCEL·LULES</h2>
+ <div class="inline" id="Ncelules">
+ <p>X: <input type="text" name="GrandariaX" size="2" pattern ="[0-9]+"></p>
+ </div>
+ onclick="window.location.href='paginaJoc.html';
+  -->
+</div>
+<img src="celula.png" alt="Celula">
+
+
+<div class="button" >
+
+  <h3 id="Next"><i class="fa fa-play"></i> INICI</h3> 
+
+</div>
+
+</form>
 
 </body>
 </html>
