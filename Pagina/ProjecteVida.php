@@ -15,5 +15,6 @@ for ($x = 0; $x <= GrandariaX; $x++) {?>
 			<input type="checkbox">
 		</td>
 <?php}}?>
+</table>
 </body>
 </html>
