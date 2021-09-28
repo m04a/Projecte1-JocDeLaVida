@@ -6,8 +6,6 @@
 
 <table>
 <?php 
-$GrandariaX = ""
-$GrandariaY = ""
 for ($x = 0; $x <= 10; $x++) {?>
 	<tr class="files">
 	<?php for ($x = 0; $x <= 10; $x++) {?>
