@@ -12,7 +12,6 @@ for ($x = 0; $x <= 10; $x++) {?>
 		<td class="columnes">
 			<input type="checkbox">
 		</td>
-<?php}}?>
-
+?>
 </body>
 </html>
