@@ -17,7 +17,7 @@ h3{
 }
 #Next{
 		margin-top:1%;
-		letter-spacing:30px;
+		letter-spacing: 25px;
 		font-weight:900;
 }
 p{
@@ -57,6 +57,10 @@ h2{
   .button{
 	  display: block;
 }
+.button2{
+    padding-left: 0px;
+    padding-right: 0px;
+}
  } 
 
 @media only screen and (min-width: 700px) {
@@ -70,83 +74,42 @@ img{
 	height:18%;
 	margin-left:15%;
 }
+.button2{
+	padding-left:30%;
+	padding-right: 30%;
+}
 }
 
 
 /*Button*/
 
-.button{
-  border: .2em solid;
-  position: relative;
+.button {
+  padding: 10px 30%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
   cursor: pointer;
-  overflow: hidden;
-  opacity: 0.6;
-  color: #FFF;
-  padding-left:2%;
-    padding-right:2%;
-
-  &__text{
-    display: block;
-    padding:1em 2em;
-    text-transform: uppercase;
-    font-weight: bold;
-    &:before{
-      content: attr(title);
-    }
-   
-  }
-  
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.button {
+  border: 2px solid #fff;
+  z-index: 1;
+}
+.button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #000;
+  transition: all 0.3s ease;
 }
 
-.button:hover{
-  opacity: 1;
-  .button__text{
-    animation: fx-text .3s ease-out;
-    &--bis{
-      animation: fx-text-bis .3s ease-out;
-    }
-
-  }   
-  
-  .button__mask{
-    animation: fx-mask .3s ease-out;
-  }    
-}
-
-.button:active{
-  opacity: 1;
-  background: white;
-  color: inherit;
-}
-
-
-
-@keyframes fx-mask {
-  0%{
-    transform: translateX(-100%) rotate(45deg);
-  }
-  100%{
-    transform: translateX(100%) rotate(45deg);
-  }
-}
-
-@keyframes fx-text {
-  0%{
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100%{
-    transform: translateX($anim-text-offset);
-    opacity: 0;
-  }
-}
-@keyframes fx-text-bis {
-  0%{
-    transform: translateX(-1 * $anim-text-offset);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0);
-    opacity: 1;
-  }
+.button:active {
+  top: 2px;
 }
