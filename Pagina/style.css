@@ -6,7 +6,7 @@ body{
 h1{
 	color:#ffffff;
 	text-align:center;
-	margin-top:5%;
+	margin-top:4%;
 	font-family: 'Droid Sans';
 }
 h3{
@@ -113,3 +113,35 @@ img{
 .button:active {
   top: 2px;
 }
+/*Taula*/
+table {
+    background-color: #000;
+    border-spacing: 0;
+}
+
+td {
+    border: 0.5px solid #F1F5DA;
+    border-radius: 3px;
+    width: 5px;
+    height: 5px;
+}
+table{
+margin-left:auto;
+margin-right:auto;
+margin-top:5%;
+}
+.error{
+font-family: 'Droid Sans';
+color:red;
+}
+.celules{
+border-radius: 50%;
+	transition: box-shadow .3s;
+	background: lightgrey;
+	cursor: pointer;
+	border: 0;
+	appearance: none; -webkit-appearance: none; 
+	width: 15px; height: 15px;
+
+}
+.celules:checked{ box-shadow: inset 0 0 0 20px red;}
