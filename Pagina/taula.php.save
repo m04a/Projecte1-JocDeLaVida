@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<?php 
+   if(isset($_POST['var'])) $var=$_POST['var'];
+
+<?php 
+for ($x = 1; $x <= $xGra; $x++) {
+        echo "<tr class='files'>";
+         for ($y = 1; $y <= $yGra; $y++) {
+                echo "<td class='columnes'>";
+                        echo "<input type='checkbox' name='tauler[$y][$x]'  class='celules'>";
+                echo "</td>";
+}
+}
+?>
+</body>
+</html>

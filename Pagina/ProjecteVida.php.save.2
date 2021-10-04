@@ -15,8 +15,8 @@
 $xGra = $_POST['GrandariaX'];
 $yGra = $_POST['GrandariaY'];
 echo '<form id="myForm" action="taula.php" method="post">';
-echo '<input type="hidden" name="xGra" value="'.$xGra.'">';
-echo '<input type="hidden" name="yGra" value="'.$yGra.'">';
+echo '<input type="hidden" name="$xGra" value />';
+echo '<input type="hidden" name="$yGra" value="$yGra" />';
 
 if ($xGra < 3 || $xGra == null || $yGra < 3 || $yGra == null || $yGra > 40 || $xGra > 20){
 echo "<p class='error'>Error: Si us plau, revisa les dades introduïdes. Es farà una redirecció en 3 segons...</p>";
@@ -32,7 +32,7 @@ else{
 }
 }
 }
-echo '<input type="submit" value="submit" onclick="iniciJs();" />';
+echo '<input type="submit" value="submit" />';
 echo '</form>'
 ?>
 </table>

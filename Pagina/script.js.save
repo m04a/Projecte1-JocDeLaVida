@@ -3,7 +3,5 @@
 }
 document.getElementById("muk").addEventListener("click",paginaJoc);
 */
-function iniciJs(){
-         alert("Hello! I am an alert box!!");
-
-}
+function jsFunction(){
+ var meco = document.getElementById('pot').childre
