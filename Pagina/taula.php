@@ -17,11 +17,11 @@ for ($x = 1; $x <= $xGra; $x++) {
        echo  "<tr class='files'>";
          for ($y = 1; $y <= $yGra; $y++) {
               echo "<td class='columnes'>";
-			if (isset($Array[$x][$y])) {
-                        echo "<input type='checkbox' name='tauler[".$y."][".$x."]'  class='celules' checked>" ;
+			if (isset($Array[$y][$x])) {
+                        echo "<input type='checkbox' name='tauler[".$y."][".$x."]'  class='celules' id='viva' checked>" ;
                 	}
 			else{
-		        echo "<input type='checkbox' name='tauler[".$y."][".$x."]'  class='celules'>" ;
+		        echo "<input type='checkbox' name='tauler[".$y."][".$x."]'  class='celules' id='morta'>" ;
 			}
   			echo "</td>";
 }
