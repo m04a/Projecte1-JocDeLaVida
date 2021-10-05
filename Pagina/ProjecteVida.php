@@ -32,7 +32,7 @@ else{
 		echo "</td>";
 }
 }
-echo '<input type="submit" value="submit" onclick="iniciJs();" />';
+echo '<input type="submit" value="submit" />';
 echo '</form>';
 }
 
