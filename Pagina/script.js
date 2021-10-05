@@ -12,5 +12,5 @@ var tauler = [];
 		tauler [i] [j] =  document.getElementsByTagName("input").checked;
      }
 }
-
+console.log(tauler);
 }
