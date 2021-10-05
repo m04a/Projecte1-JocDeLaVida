@@ -6,10 +6,10 @@ var tauler = [];
 
   var num = lineas.length;
   var num2 = columnes.length;
-   for (let i = 1; i < num; i++) {
+   for (var i = 1; i < num; i++) {
 	tauler [i] = [];
-		for (let j = 1; j < num; j++) {
-		array [i] [j] =  document.getElementsByTagName("input").checked;
+		for (var j = 1; j < num2; j++) {
+		tauler [i] [j] =  document.getElementsByTagName("input").checked;
      }
 }
 
