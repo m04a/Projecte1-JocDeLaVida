@@ -28,7 +28,7 @@ for ($x = 1; $x <= $xGra; $x++) {
 echo "</tr>";
 }
 echo "</table>";
-echo '<input type="submit" value="submit" onclick="iniciJs();" />';
+echo '<input type="submit" value="Jugar" onclick="iniciJs();" />';
 ?>
 </body>
 </html>
