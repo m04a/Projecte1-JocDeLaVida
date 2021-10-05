@@ -19,8 +19,9 @@ echo '<input type="hidden" name="xGra" value="'.$xGra.'">';
 echo '<input type="hidden" name="yGra" value="'.$yGra.'">';
 
 if ($xGra < 3 || $xGra == null || $yGra < 3 || $yGra == null || $yGra > 40 || $xGra > 20){
-echo "<p class='error'>Error: Si us plau, revisa les dades introduïdes. Es farà una redirecció en 3 segons...</p>";
-header('Refresh: 3; Projecte1.html');
+echo "<p class='error'>Error: Si us plau, revisa les dades introduïdes recorda que la X (No pot ser més gran de 20 ni més petita que 4) i la Y (No pot ser més gran de 40 ni més petita que 4). Es farà una redirecció en 10 segons... O clic a en 'Tornar al formulari'</p>";
+echo "<a id='myLink' href='Projecte1.html' >Tornar al formulari</a>";
+header('Refresh: 10; Projecte1.html');
 }
 else{
  for ($x = 1; $x <= $xGra; $x++) {
@@ -31,9 +32,10 @@ else{
 		echo "</td>";
 }
 }
-}
 echo '<input type="submit" value="submit" onclick="iniciJs();" />';
-echo '</form>'
+echo '</form>';
+}
+
 ?>
 </table>
 </body>
