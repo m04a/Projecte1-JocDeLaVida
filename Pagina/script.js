@@ -32,21 +32,20 @@ function iniciJs() {
     console.log(tauler);
 }
 
-/*
+
 //Aqui aplicarem les normes corresponents
     for (var i = 0; i < num; i++) {
         for (var j = 0; j < num2; j++) {
-            aplicarNormes(i, j,num,num2,tauler,taulerProx);
+             //aplicarNormes(i, j,num,num2,tauler,taulerProx);
         }
 
-copiarIResetNexGen(num,num2,tauler,taulerProx);
+        copiarIResetNexGen(num, num2, tauler, taulerProx);
 
-actualitzarTempsreal(num,num2,tauler,taulerProx);
-    }
-console.log(tauler);
+//actualitzarTempsreal(num,num2,tauler,taulerProx);
+
+
 
 }
-
 function copiarIResetNexGen(num,num2,tauler,taulerProx){
  for (var i = 0; i < num; i++) {
           for (var j = 0; j < num2; j++) {
@@ -54,9 +53,10 @@ function copiarIResetNexGen(num,num2,tauler,taulerProx){
               taulerProx[i][j] = 0;
           }
       }
+ console.log(taulerProx);
 }
 
-
+/*
 function actualitzarTempsreal(num,num2,tauler,taulerProx){
 for (var i = 0; i < num; i++) {
             for (var j = 0; j < num2; j++) {
@@ -116,7 +116,7 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
     }
     return count;
 }
-
 */
+
 
 
