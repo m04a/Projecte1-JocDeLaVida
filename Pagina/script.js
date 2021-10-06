@@ -29,8 +29,31 @@ for (var i = 0; i < num; i++) {
         for (var j = 0; j < num2; j++) {
             aplicarNormes(i, j);
         }
+ 
+copiarIResetNexGen(num,num2); 
+actualitzarTempsreal(num,num2);
     }
 console.log(tauler);
+}
+function copiarIResetNexGen(){
+ for (var i = 0; i < rows; i++) {
+          for (var j = 0; j < cols; j++) {
+              tauler[i][j] = taulerProx[i][j];
+              taulerProx[i][j] = 0;
+          }
+      }
+}
+function actualitzarTempsreal(num,num2){
+for (var i = 0; i < num; i++) {
+            for (var j = 0; j < num2; j++) {
+                var celula = document.getElementsByName(tauler + "[" + i + "]" + "[" + j + "]");
+                if (tauler[i][j] == 0) {
+                    celula.setAttribute("checked", "true");
+                } else {
+                    celula.setAttribute("checked", "false");
+                }
+            }
+        }
 }
 function aplicarNormes(num, num2) {
 //Ens farà el return de la funció que conta els veins
@@ -79,3 +102,4 @@ function aplicarNormes(num, num2) {
     }
     return count;
 }
+
