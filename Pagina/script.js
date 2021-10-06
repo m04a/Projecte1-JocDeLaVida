@@ -20,10 +20,9 @@ console.log(num);
      }
 }
 for (var i = 0; i < num; i++) {
-	columnes = tr[i].getElementsByTagName("td");
                 for (var j = 0; j < num2; j++) {
 					/*var celula = document.getElementsByName(tauler + "[" + i + "]" + "[" + j + "]");*/
-					if (columnes[j].getElementByTagName("checkbox").checked = true;){
+					if (columnes[j].getElementsByTagName("checkbox").checked = true;){
 						tauler[i][j] = 1;
 					}
                 //Fer condició de si troba el id "viva" en un element convertirlo en 1 si no pasar-ho a 0
@@ -33,16 +32,16 @@ for (var i = 0; i < num; i++) {
 //Aqui aplicarem les normes corresponents
     for (var i = 0; i < num; i++) {
         for (var j = 0; j < num2; j++) {
-            aplicarNormes(i, j,num,num2);
+            aplicarNormes(i, j,num,num2,tauler);
         }
 
-copiarIResetNexGen(num,num2);
+copiarIResetNexGen(num,num2,tauler,taulerProx);
 
-actualitzarTempsreal(num,num2);
+actualitzarTempsreal(num,num2,tauler,taulerProx);
     }
 console.log(tauler);
 }
-function copiarIResetNexGen(num,num2){
+function copiarIResetNexGen(num,num2,tauler,taulerProx){
  for (var i = 0; i < num; i++) {
           for (var j = 0; j < num2; j++) {
               tauler[i][j] = taulerProx[i][j];
@@ -50,7 +49,7 @@ function copiarIResetNexGen(num,num2){
           }
       }
 }
-function actualitzarTempsreal(num,num2){
+function actualitzarTempsreal(num,num2,tauler,taulerProx){
 for (var i = 0; i < num; i++) {
             for (var j = 0; j < num2; j++) {
                 var celula = document.getElementsByName(tauler + "[" + i + "]" + "[" + j + "]");
@@ -62,11 +61,11 @@ for (var i = 0; i < num; i++) {
             }
         }
 }
-function aplicarNormes(num, num2,linies,columnes) {
+function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Ens farà el return de la funció que conta els veins
 	var linia = linies;
 	var columna = columnes;
-    var numVeins = contarVeins(num, num2,linia,columna);
+    var numVeins = contarVeins(num, num2,linia,columna,tauler,taulerProx);
     if (tauler[num][num2] == 1) {
         if (numVeins < 2) {
             taulerProx[num][num2] = 0;
@@ -83,7 +82,7 @@ function aplicarNormes(num, num2,linies,columnes) {
     }
 
         //Necessito el numero original de lineas i columnes per la següent condició
-        function contarVeins(num, num2,linia,columna) {
+        function contarVeins(num, num2,linia,columna,tauler,taulerProx) {
     var count = 0;
     if (num-1 >= 0) {
         if (tauler[num-1][num2] == 1) count++;
