@@ -60,6 +60,7 @@ for (var i = 0; i < num; i++) {
             for (var j = 0; j < num2; j++) {
                 var celula = document.getElementsByName(tauler + "[" + i + "]" + "[" + j + "]");
                 if (tauler[i][j] === 0) {
+                    console.log("------>" + celula);
                     celula.setAttribute("checked", "true");
                 } else {
                     celula.setAttribute("checked", "false");
