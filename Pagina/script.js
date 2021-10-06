@@ -21,18 +21,19 @@ console.log(num);
 }
 for (var i = 0; i < num; i++) {
                 for (var j = 0; j < num2; j++) {
-					/*var celula = document.getElementsByName(tauler + "[" + i + "]" + "[" + j + "]");*/
-					if (columnes[j].getElementsByTagName("checkbox").checked = true;){
+					if (document.getElementByName('"tauler" + "[" + i + "][" + j + "]"').checked = true){
 						tauler[i][j] = 1;
 					}
                 //Fer condició de si troba el id "viva" en un element convertirlo en 1 si no pasar-ho a 0
      }
 }
+console.log(tauler);
+
 
 //Aqui aplicarem les normes corresponents
     for (var i = 0; i < num; i++) {
         for (var j = 0; j < num2; j++) {
-            aplicarNormes(i, j,num,num2,tauler);
+            aplicarNormes(i, j,num,num2,tauler,taulerProx);
         }
 
 copiarIResetNexGen(num,num2,tauler,taulerProx);
@@ -40,7 +41,9 @@ copiarIResetNexGen(num,num2,tauler,taulerProx);
 actualitzarTempsreal(num,num2,tauler,taulerProx);
     }
 console.log(tauler);
+
 }
+
 function copiarIResetNexGen(num,num2,tauler,taulerProx){
  for (var i = 0; i < num; i++) {
           for (var j = 0; j < num2; j++) {
@@ -49,6 +52,8 @@ function copiarIResetNexGen(num,num2,tauler,taulerProx){
           }
       }
 }
+
+
 function actualitzarTempsreal(num,num2,tauler,taulerProx){
 for (var i = 0; i < num; i++) {
             for (var j = 0; j < num2; j++) {
@@ -105,12 +110,12 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
     if (num+1 < linia && num2-1 >= 0) {
         if (tauler[num+1][num2-1] == 1) count++;
     }
-    if (num+1 < linia && num2+1 < *NUMERO COLUMNES*) {
+    if (num+1 < linia && num2+1 < columna) {
         if (tauler[num+1][num2+1] == 1) count++;
     }
     return count;
 }
 
-}
+
 
 

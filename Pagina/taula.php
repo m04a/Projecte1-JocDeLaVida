@@ -32,3 +32,4 @@ echo '<input type="submit" value="Jugar" onclick="iniciJs();" />';
 ?>
 </body>
 </html>
+
