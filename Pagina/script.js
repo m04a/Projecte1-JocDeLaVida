@@ -31,6 +31,8 @@ for (var i = 0; i < num; i++) {
         }
 
 copiarIResetNexGen(num,num2);
+ 
+copiarIResetNexGen(num,num2); 
 actualitzarTempsreal(num,num2);
     }
 console.log(tauler);
@@ -102,3 +104,6 @@ function aplicarNormes(num, num2) {
     }
     return count;
 }
+
+}
+
