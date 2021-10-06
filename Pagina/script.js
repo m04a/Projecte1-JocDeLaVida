@@ -20,7 +20,7 @@ console.log(num);
      }
 }
 for (var i = 0; i < num; i++) {
-    columnes=files[i].getElementsByTagName("td");
+    columnes=lineas[i].getElementsByTagName("td");
                 for (var j = 0; j < num2; j++) {
 
 					if (columnes[j].getElementsByTagName("input")[0].checked){
