@@ -24,7 +24,6 @@ function iniciJs() {
     for (i = 0; i < num; i++) {
         columnes = lineas[i].getElementsByTagName("td");
         for (j = 0; j < num2; j++) {
-
             if (columnes[j].getElementsByTagName("input")[0].checked) {
                 tauler[i][j] = 1;
             }
@@ -39,8 +38,8 @@ function iniciJs() {
         for (j = 0; j < num2; j++) {
             aplicarNormes(i, j,num,num2,tauler,taulerProx);
         }
-        copiarIResetNexGen(i, j, tauler, taulerProx);
-        actualitzarTempsreal(num,num2,tauler,taulerProx);
+       // copiarIResetNexGen(i, j, tauler, taulerProx);
+        //actualitzarTempsreal(num,num2,tauler,taulerProx);
 
     }
 }
@@ -60,8 +59,8 @@ for (var i = 0; i < num; i++) {
             for (var j = 0; j < num2; j++) {
                 var celula = document.getElementsByName(tauler + "[" + i + "]" + "[" + j + "]");
                 if (tauler[i][j] === 0) {
-                    console.log("------>" + celula);
-                    celula.setAttribute("checked", "true");
+                    console.log("------>" + celula[0]);
+                    celula[0].setAttribute("checked", "true");
                 } else {
                     celula.setAttribute("checked", "false");
                 }
