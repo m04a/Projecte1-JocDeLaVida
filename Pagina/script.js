@@ -20,8 +20,10 @@ console.log(num);
      }
 }
 for (var i = 0; i < num; i++) {
+    columnes=files.getElementsByTagName("td");
                 for (var j = 0; j < num2; j++) {
-					if (document.getElementsByName('"tauler" + "[" + i + "][" + j + "]"').checked === true){
+
+					if (columnes[j].getElementsByTagName("input")[0].checked){
 						tauler[i][j] = 1;
 					}
                 //Fer condició de si troba el id "viva" en un element convertirlo en 1 si no pasar-ho a 0
