@@ -1,7 +1,7 @@
 function iniciJs(){
-         alert("El Botó funciona i esta vinculat");
-var lineas = document.getElementsByTagName("tr");
-var columnes  = document.getElementsByTagName("td");
+   alert("El Botó funciona i esta vinculat");
+  var lineas = document.getElementsByTagName("tr");
+  var columnes  = document.getElementsByTagName("td");
   var num = lineas.length;
   var num2 = columnes.length;
   num2 = num2/num;
@@ -31,8 +31,7 @@ for (var i = 0; i < num; i++) {
         }
 
 copiarIResetNexGen(num,num2);
- 
-copiarIResetNexGen(num,num2); 
+
 actualitzarTempsreal(num,num2);
     }
 console.log(tauler);
