@@ -26,6 +26,7 @@ for (var i = 0; i < num; i++) {
 						tauler[i][j] = 1;
 					}
                 //Fer condició de si troba el id "viva" en un element convertirlo en 1 si no pasar-ho a 0
+	
      }
 }
 
@@ -35,9 +36,19 @@ for (var i = 0; i < num; i++) {
             aplicarNormes(i, j,num,num2,tauler);
         }
 
+<<<<<<< HEAD
 copiarIResetNexGen(num,num2,tauler,taulerProx);
 
 actualitzarTempsreal(num,num2,tauler,taulerProx);
+=======
+<<<<<<< HEAD
+copiarIResetNexGen(num,num2);
+
+=======
+copiarIResetNexGen(num,num2); 
+>>>>>>> b2398ae (Millora js)
+actualitzarTempsreal(num,num2);
+>>>>>>> 3286e6c (Millora js)
     }
 console.log(tauler);
 }
