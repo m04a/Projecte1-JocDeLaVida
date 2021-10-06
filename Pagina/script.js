@@ -1,37 +1,38 @@
-function iniciJs(){
-   alert("El Botó funciona i esta vinculat");
-  var lineas = document.getElementsByTagName("tr");
-  var columnes  = document.getElementsByTagName("td");
-  var num = lineas.length;
-  var num2 = columnes.length;
-  num2 = num2/num;
-var tauler = new Array(num);
-var taulerProx = new Array(num);
-console.log(num);
+function iniciJs() {
+    alert("El Botó funciona i esta vinculat");
+    var lineas = document.getElementsByTagName("tr");
+    var columnes = document.getElementsByTagName("td");
+    var num = lineas.length;
+    var num2 = columnes.length;
+    num2 = num2 / num;
+    var tauler = new Array(num);
+    var taulerProx = new Array(num);
+    console.log(num);
     for (var i = 0; i < num; i++) {
         tauler[i] = new Array(num2);
         taulerProx[i] = new Array(num2);
+    }
+
+    for (var i = 0; i < num; i++) {
+        for (var j = 0; j < num2; j++) {
+            tauler[i][j] = 0;
+            taulerProx[i][j] = 0;
+        }
+    }
+    for (var i = 0; i < num; i++) {
+        columnes = lineas[i].getElementsByTagName("td");
+        for (var j = 0; j < num2; j++) {
+
+            if (columnes[j].getElementsByTagName("input")[0].checked) {
+                tauler[i][j] = 1;
+            }
+            //Fer condició de si troba el id "viva" en un element convertirlo en 1 si no pasar-ho a 0
+        }
+    }
+    console.log(tauler);
 }
 
-   for (var i = 0; i < num; i++) {
-                for (var j = 0; j < num2; j++) {
-                tauler[i][j] = 0;
-                taulerProx[i][j] = 0;
-     }
-}
-for (var i = 0; i < num; i++) {
-    columnes=lineas[i].getElementsByTagName("td");
-                for (var j = 0; j < num2; j++) {
-
-					if (columnes[j].getElementsByTagName("input")[0].checked){
-						tauler[i][j] = 1;
-					}
-                //Fer condició de si troba el id "viva" en un element convertirlo en 1 si no pasar-ho a 0
-     }
-}
-console.log(tauler);
-
-
+/*
 //Aqui aplicarem les normes corresponents
     for (var i = 0; i < num; i++) {
         for (var j = 0; j < num2; j++) {
@@ -116,6 +117,6 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
     return count;
 }
 
-
+*/
 
 
