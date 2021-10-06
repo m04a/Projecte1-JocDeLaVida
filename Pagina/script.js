@@ -20,14 +20,20 @@ console.log(num);
      }
 }
 for (var i = 0; i < num; i++) {
+	columnes = tr[i].getElementsByTagName("td");
                 for (var j = 0; j < num2; j++) {
+					/*var celula = document.getElementsByName(tauler + "[" + i + "]" + "[" + j + "]");*/
+					if (columnes[j].getElementByTagName("checkbox").checked = true;){
+						tauler[i][j] = 1;
+					}
                 //Fer condició de si troba el id "viva" en un element convertirlo en 1 si no pasar-ho a 0
      }
 }
+
 //Aqui aplicarem les normes corresponents
     for (var i = 0; i < num; i++) {
         for (var j = 0; j < num2; j++) {
-            aplicarNormes(i, j);
+            aplicarNormes(i, j,num,num2);
         }
 
 copiarIResetNexGen(num,num2);
@@ -36,9 +42,9 @@ actualitzarTempsreal(num,num2);
     }
 console.log(tauler);
 }
-function copiarIResetNexGen(){
- for (var i = 0; i < rows; i++) {
-          for (var j = 0; j < cols; j++) {
+function copiarIResetNexGen(num,num2){
+ for (var i = 0; i < num; i++) {
+          for (var j = 0; j < num2; j++) {
               tauler[i][j] = taulerProx[i][j];
               taulerProx[i][j] = 0;
           }
@@ -56,9 +62,11 @@ for (var i = 0; i < num; i++) {
             }
         }
 }
-function aplicarNormes(num, num2) {
+function aplicarNormes(num, num2,linies,columnes) {
 //Ens farà el return de la funció que conta els veins
-    var numVeins = contarVeins(num, num2);
+	var linia = linies;
+	var columna = columnes;
+    var numVeins = contarVeins(num, num2,linia,columna);
     if (tauler[num][num2] == 1) {
         if (numVeins < 2) {
             taulerProx[num][num2] = 0;
@@ -75,7 +83,7 @@ function aplicarNormes(num, num2) {
     }
 
         //Necessito el numero original de lineas i columnes per la següent condició
-        function contarVeins(num, num2) {
+        function contarVeins(num, num2,linia,columna) {
     var count = 0;
     if (num-1 >= 0) {
         if (tauler[num-1][num2] == 1) count++;
@@ -83,22 +91,22 @@ function aplicarNormes(num, num2) {
     if (num-1 >= 0 && num2-1 >= 0) {
         if (tauler[num-1][num2-1] == 1) count++;
     }
-    if (num-1 >= 0 && num2+1 < *NUMERO COLUMNES*) {
+    if (num-1 >= 0 && num2+1 < columna) {
         if (tauler[num-1][num2+1] == 1) count++;
     }
     if (num2-1 >= 0) {
         if (tauler[num][num2-1] == 1) count++;
     }
-    if (num2+1 < *NUMERO COLUMNES*) {
+    if (num2+1 < columna) {
         if (tauler[num][num2+1] == 1) count++;
     }
-    if (num+1 < *NUMERO LINEAS*) {
+    if (num+1 < linia) {
         if (tauler[num+1][num2] == 1) count++;
     }
-    if (num+1 < *NUMERO LINEAS* && num2-1 >= 0) {
+    if (num+1 < linia && num2-1 >= 0) {
         if (tauler[num+1][num2-1] == 1) count++;
     }
-    if (num+1 < *NUMERO LINEAS* && num2+1 < *NUMERO COLUMNES*) {
+    if (num+1 < linia && num2+1 < *NUMERO COLUMNES*) {
         if (tauler[num+1][num2+1] == 1) count++;
     }
     return count;
