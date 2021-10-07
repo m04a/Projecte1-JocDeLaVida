@@ -63,7 +63,7 @@ function iniciJs() {
         for (j = 0; j < num2; j++) {
             aplicarNormes(i, j,num,num2,tauler,taulerProx);
         }
-        //copiarIResetNexGen(num, num2, tauler, taulerProx);
+        //copiarIResetNexGen(num,num2,tauler,taulerProx);
         //actualitzarTempsreal(num,num2,tauler,taulerProx);
         console.log(taulerProx);
     }
