@@ -29,6 +29,7 @@ for ($x = 1; $x <= $xGra; $x++) {
 echo "</tr>";
 }
 echo "</table>";
+/*Fem els botons que cridarán les funcions del joc*/
 echo '<input type="submit" value="Jugar" onclick="iniciJs();" />';
 echo '<input type="submit" value="Auto" onclick="auto();" />';
 echo '<input type="submit" value="Velocitat+" onclick="pujarVelocitat();" />';

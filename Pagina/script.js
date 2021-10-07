@@ -1,4 +1,15 @@
 function iniciJs() {
+    /***********************
+     *  Joc fet per Mohamed Bourarach DAW 2
+     ───────────────▄▄───▐█
+     ───▄▄▄───▄██▄──█▀───█─▄
+     ─▄██▀█▌─██▄▄──▐█▀▄─▐█▀
+     ▐█▀▀▌───▄▀▌─▌─█─▌──▌─▌
+     ▌▀▄─▐──▀▄─▐▄─▐▄▐▄─▐▄─▐▄
+     *
+     * INS CENDRASSSOS
+     * Professors -> Dani prados i Xavi Vallejo
+     * *****************************/
     let i;
     let j;
     //Obtenim els tr i els td en un array. Les columnes es trobaràn amb una formula inversa del àrea.
@@ -6,6 +17,7 @@ function iniciJs() {
     let columnes = document.getElementsByTagName("td");
     const num = lineas.length;
     let num2 = columnes.length;
+    //Si dividim el area del quadrat
     num2 = num2 / num;
     //Creem el array simple i fem la següent generació. S'ha asignat el valor de les lineas.
     const tauler = new Array(num);
@@ -54,7 +66,8 @@ function iniciJs() {
         console.log(taulerProx);
     }
 }
-
+/*Amb aquesta funció basicament agafem totes les files i comprovem en la nostra taula nova quienes d'aquestes en la següent
+Generació s'han de activar el checkbox corresponent*/
 function actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas){
 for (let i = 0; i < num; i++) {
     columnes = lineas[i].getElementsByTagName("td");
@@ -63,6 +76,7 @@ for (let i = 0; i < num; i++) {
             }
         }
 }
+
 
 function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Ens farà el return de la funció que conta els veins
@@ -86,10 +100,22 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Funció per poder carregar la nostre funció automaticament-
 
 /*** Funció de Velocitat*/
+let velocitat =500;
+let interval;
 
+function auto(){
+    interval = setInterval(iniciJs, 500);
+    //setInterval(function(){iniciJs();},velocitat);
 
-let velocitat = 500;
-var running = null;
+}
+function pujarVelocitat(){
+    velocitat= velocitat-50;
+}
+function baixarVelocitat(){
+    velocitat= velocitat+50;
+}
+/*
+*var running = null;
 
 function auto(){
     if (running) {
@@ -108,6 +134,7 @@ function baixarVelocitat(){
     running = setInterval(function(){iniciJs();}, (velocitat=velocitat+25));
 }
 
+* */
 
 
         /*Aqui el que fem es bàsicament agafant la totes les posicions que estan al voltant de la ce·la sel·leccionada

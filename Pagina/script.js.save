@@ -1,7 +1,0 @@
-/*function paginaJoc (){
-	
-}
-document.getElementById("muk").addEventListener("click",paginaJoc);
-*/
-function jsFunction(){
- var meco = document.getElementById('pot').childre
