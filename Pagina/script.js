@@ -1,7 +1,6 @@
 function iniciJs() {
     let i;
     let j;
-    alert("El Botó funciona i esta vinculat");
     //Obtenim els tr i els td en un array. Les columnes es trobaràn amb una formula inversa del àrea.
     var lineas = document.getElementsByTagName("tr");
     var columnes = document.getElementsByTagName("td");
