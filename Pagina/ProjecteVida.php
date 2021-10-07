@@ -34,7 +34,7 @@ else{
 }
 }
 echo '</table>';
-echo '<input type="submit" value="submit" />';
+echo '<input type="submit" value="Arranca el joc!" />';
 echo '</form>';
 }
 
