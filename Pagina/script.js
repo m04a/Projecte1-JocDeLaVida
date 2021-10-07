@@ -101,18 +101,22 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Funció per poder carregar la nostre funció automaticament-
 
 /*** Funció de Velocitat*/
-function auto(){
-    const velocitat = 500;
-    pujarVelocitat(velocitat);
+let velocitat =500;
 
+function auto(){
     setInterval(function(){iniciJs();},velocitat);
 }
-function pujarVelocitat(velocitat){
-    velocitat += 100;
+function pujarVelocitat(){
+    if (velocitat>100)
+    velocitat= velocitat-50;
 }
-function baixarVelocitat(velocitat){
-    velocitat-=100;
+function baixarVelocitat(){
+if (velocitat<100)
+    velocitat= velocitat+50;
 }
+
+
+
         //Necessito el numero original de lineas i columnes per la següent condició
 function countVecinasVivasDeCeldaMuerta(num, num2,linia,columna,tauler) {
     var count = 0;
