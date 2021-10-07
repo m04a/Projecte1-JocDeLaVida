@@ -43,7 +43,6 @@ function iniciJs() {
                 tauler[i][j] = taulerProx[i][j];
                 taulerProx[i][j] = 0;
             }
-            console.log(tauler);
         }
 
     }
