@@ -102,13 +102,16 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 
 /*** Funció de Velocitat*/
 function auto(){
-    setInterval(function(){iniciJs();},500);
-}
-function pujarVelocitat(){
+    const velocitat = 500;
+    pujarVelocitat(velocitat);
 
+    setInterval(function(){iniciJs();},velocitat);
 }
-function baixarVelocitat(){
-
+function pujarVelocitat(velocitat){
+    velocitat += 100;
+}
+function baixarVelocitat(velocitat){
+    velocitat-=100;
 }
         //Necessito el numero original de lineas i columnes per la següent condició
 function countVecinasVivasDeCeldaMuerta(num, num2,linia,columna,tauler) {
