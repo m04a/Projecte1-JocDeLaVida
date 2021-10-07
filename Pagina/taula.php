@@ -13,7 +13,7 @@
    $Array= $_POST['tauler'];
 ?>
 <?php 
-//Imprimim la taula corresponents
+//Imprimim la taula corresponents amb un bucle, aquest basicament ens fara tot a partir del array anterior
 echo "<table>";
 for ($x = 1; $x <= $xGra; $x++) {
        echo  "<tr class='files'>";
