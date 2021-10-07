@@ -104,7 +104,7 @@ let velocitat =500;
 let interval;
 
 function auto(){
-    interval = setInterval(iniciJs, 500);
+    interval = setInterval(iniciJs, velocitat);
     //setInterval(function(){iniciJs();},velocitat);
 
 }
