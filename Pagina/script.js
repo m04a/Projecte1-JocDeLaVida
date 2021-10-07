@@ -86,16 +86,26 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Funció per poder carregar la nostre funció automaticament-
 
 /*** Funció de Velocitat*/
-let velocitat =500;
+
+
+let velocitat = 500;
+var running = null;
 
 function auto(){
-    setInterval(function(){iniciJs();},velocitat);
+    if (running) {
+        clearInterval(running);
+        running = null;
+    } else {
+        running = setInterval( velocitat);
+    }
 }
 function pujarVelocitat(){
-    velocitat= velocitat-50;
+    clearInterval(running);
+    running = setInterval(function(){iniciJs();}, (velocitat=velocitat-25));
 }
 function baixarVelocitat(){
-    velocitat= velocitat+50;
+    clearInterval(running);
+    running = setInterval(function(){iniciJs();}, (velocitat=velocitat+25));
 }
 
 
