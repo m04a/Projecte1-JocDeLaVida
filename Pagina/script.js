@@ -77,11 +77,7 @@ function actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas){
 for (var i = 0; i < num; i++) {
     columnes = lineas[i].getElementsByTagName("td");
             for (var j = 0; j < num2; j++) {
-                if(taulerProx[i][j] === 1){
-                    columnes[j].getElementsByTagName("input")[0].checked = true;
-                }else{
-                    columnes[j].getElementsByTagName("input")[0].checked = false;
-                }
+                columnes[j].getElementsByTagName("input")[0].checked = taulerProx[i][j] === 1;
             }
         }
 }
@@ -106,7 +102,9 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
             }
       //  }
     }
-
+function auto(){
+    setInterval(function(){iniciJs();},500);
+}
         //Necessito el numero original de lineas i columnes per la següent condició
 function countVecinasVivasDeCeldaMuerta(num, num2,linia,columna,tauler) {
     var count = 0;
