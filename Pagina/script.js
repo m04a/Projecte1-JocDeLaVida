@@ -99,25 +99,25 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
     }
 //Funció per poder carregar la nostre funció automaticament-
 
-/*** Funció de Velocitat*/
+/*** Funció de Velocitat i Parar Joc*/
 let velocitat =500;
 let interval;
-
+//Asignem al interval la velocitat predefinida i l'arrenquem
 function auto(){
     interval = setInterval(iniciJs, velocitat);
-    //setInterval(function(){iniciJs();},velocitat);
-
 }
+//Netejem el interval, és a dir para de executar el codi
 function autoStop(){
     clearInterval(interval);
 }
+//Fem una neteja del interval i pujem la velocitat
 function pujarVelocitat(){
     clearInterval(interval);
     velocitat= velocitat-50;
-    console.log(velocitat);
     interval = setInterval(iniciJs, velocitat);
-
 }
+//Fem una neteja del interval i baixem la velocitat
+
 function baixarVelocitat(){
     clearInterval(interval);
     velocitat= velocitat+50;
@@ -125,6 +125,7 @@ function baixarVelocitat(){
 
 }
 /*
+Proves interesants
 *var running = null;
 
 function auto(){
