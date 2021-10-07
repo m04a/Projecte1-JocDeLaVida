@@ -108,6 +108,9 @@ function auto(){
     //setInterval(function(){iniciJs();},velocitat);
 
 }
+function autoStop(){
+    clearInterval(interval);
+}
 function pujarVelocitat(){
     velocitat= velocitat-50;
 }

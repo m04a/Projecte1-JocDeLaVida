@@ -13,6 +13,7 @@
    $Array= $_POST['tauler'];
 ?>
 <?php 
+//Imprimim la taula corresponents
 echo "<table>";
 for ($x = 1; $x <= $xGra; $x++) {
        echo  "<tr class='files'>";
@@ -32,9 +33,10 @@ echo "</table>";
 /*Fem els botons que cridarán les funcions del joc*/
 echo '<input type="submit" value="Jugar" onclick="iniciJs();" />';
 echo '<input type="submit" value="Auto" onclick="auto();" />';
+echo '<input type="submit" value="PausarJoc" onclick="esborrar();" />';
 echo '<input type="submit" value="Velocitat+" onclick="pujarVelocitat();" />';
 echo '<input type="submit" value="Velocitat-" onclick="baixarVelocitat();" />';
-echo '<input type="submit" value="Netejar" onclick="esborrar();" />';
+
 ?>
 </body>
 </html>
