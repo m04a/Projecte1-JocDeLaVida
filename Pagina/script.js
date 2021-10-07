@@ -35,7 +35,7 @@ function iniciJs() {
         }
     }
 
-    function copiarIResetNexGen(num,num2,tauler,taulerProx){
+    /*function copiarIResetNexGen(num,num2,tauler,taulerProx){
         console.log(num);
         console.log(num2);
         for (let i = 0; i < num; i++) {
@@ -46,7 +46,7 @@ function iniciJs() {
         }
 
     }
-
+*/
 //Necessitem recorre un altre cop els nostres arrays.
 /**
  * SIGNIFICAT DE FUNCIONS $RESUMIT
@@ -63,7 +63,7 @@ function iniciJs() {
         for (j = 0; j < num2; j++) {
             aplicarNormes(i, j,num,num2,tauler,taulerProx);
         }
-        copiarIResetNexGen(num,num2,tauler,taulerProx);
+        //copiarIResetNexGen(num,num2,tauler,taulerProx);
         actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas);
         console.log(tauler)
         console.log(taulerProx);
@@ -77,7 +77,7 @@ function actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas){
 for (var i = 0; i < num; i++) {
     columnes = lineas[i].getElementsByTagName("td");
             for (var j = 0; j < num2; j++) {
-                if(tauler[i][j] === 1){
+                if(taulerProx[i][j] === 1){
                     columnes[j].getElementsByTagName("input")[0].checked = true;
                 }else{
                     columnes[j].getElementsByTagName("input")[0].checked = false;
