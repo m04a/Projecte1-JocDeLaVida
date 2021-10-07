@@ -98,10 +98,12 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
         }
         //Si la cel·lula està morta, i té un numero de veins exacte a 3. Llavors aquesta reviu.
     } else if (tauler[num][num2] === 0) {
-            if (countVecinasMuertasDeCeldaViva(num, num2,linies,columnes,tauler,taulerProx) === 3) {
-                taulerProx[num][num2] = 1;
+           // if (countVecinasMuertasDeCeldaViva(num, num2,linies,columnes,tauler,taulerProx) === 3) {
+                if (numVeins ===3) {
+                    taulerProx[num][num2] = 1;
+                }
             }
-        }
+      //  }
     }
 
         //Necessito el numero original de lineas i columnes per la següent condició
@@ -134,7 +136,7 @@ function countVecinasVivasDeCeldaMuerta(num, num2,linia,columna,tauler) {
     return count;
 }
 
-
+/*
 function countVecinasMuertasDeCeldaViva(num, num2,linia,columna,tauler) {
     var count = 0;
     if (num-1 >= 0) {
@@ -163,7 +165,7 @@ function countVecinasMuertasDeCeldaViva(num, num2,linia,columna,tauler) {
     }
     return count;
 }
-
+*/
 
 
 
