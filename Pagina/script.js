@@ -55,7 +55,7 @@ function iniciJs() {
 
         }
         console.log(taulerProx);
-        copiarIResetNexGen(i, j, tauler, taulerProx);
+        copiarIResetNexGen(num, num2, tauler, taulerProx);
         //actualitzarTempsreal(num,num2,tauler,taulerProx);
 
     }
