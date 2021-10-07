@@ -65,6 +65,7 @@ function iniciJs() {
         }
         copiarIResetNexGen(num,num2,tauler,taulerProx);
         actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas);
+        console.log(tauler)
         console.log(taulerProx);
     }
 }
