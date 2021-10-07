@@ -90,6 +90,6 @@ Graciès a fontawesome per fer la vida més fàcil
   
 * [Font Awesome](https://fontawesome.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">Tornar cap adalt</a>)</p>
 
 
