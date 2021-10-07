@@ -114,6 +114,7 @@ function autoStop(){
 function pujarVelocitat(){
     clearInterval(interval);
     velocitat= velocitat-50;
+    console.log(velocitat);
     interval = setInterval(iniciJs, velocitat);
 
 }
