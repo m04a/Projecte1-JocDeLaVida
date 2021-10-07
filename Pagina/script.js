@@ -35,7 +35,6 @@ function iniciJs() {
         }
     }
 
-    console.log(tauler);
 
 //Necessitem recorre un altre cop els nostres arrays.
 /**
@@ -52,14 +51,14 @@ function iniciJs() {
     for (i = 0; i < num; i++) {
         for (j = 0; j < num2; j++) {
             aplicarNormes(i, j,num,num2,tauler,taulerProx);
-
+        console.log(tauler);
         }
-        console.log(taulerProx);
-        copiarIResetNexGen(num, num2, tauler, taulerProx);
+        //copiarIResetNexGen(num, num2, tauler, taulerProx);
         //actualitzarTempsreal(num,num2,tauler,taulerProx);
 
     }
 }
+/*
 function copiarIResetNexGen(num,num2,tauler,taulerProx){
  for (var i = 0; i < num; i++) {
           for (var j = 0; j < num2; j++) {
@@ -69,7 +68,7 @@ function copiarIResetNexGen(num,num2,tauler,taulerProx){
      console.log(tauler);
       }
 
-}
+}*/
 /*
 /*
 function actualitzarTempsreal(num,num2,tauler,taulerProx){
