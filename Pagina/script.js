@@ -55,12 +55,12 @@ function iniciJs() {
 
         }
         console.log(taulerProx);
-       // copiarIResetNexGen(i, j, tauler, taulerProx);
+        copiarIResetNexGen(i, j, tauler, taulerProx);
         //actualitzarTempsreal(num,num2,tauler,taulerProx);
 
     }
 }
-/*function copiarIResetNexGen(num,num2,tauler,taulerProx){
+function copiarIResetNexGen(num,num2,tauler,taulerProx){
  for (var i = 0; i < num; i++) {
           for (var j = 0; j < num2; j++) {
               tauler[i][j] = taulerProx[i][j];
