@@ -51,11 +51,10 @@ function iniciJs() {
     for (i = 0; i < num; i++) {
         for (j = 0; j < num2; j++) {
             aplicarNormes(i, j,num,num2,tauler,taulerProx);
-        console.log(tauler);
         }
         //copiarIResetNexGen(num, num2, tauler, taulerProx);
         //actualitzarTempsreal(num,num2,tauler,taulerProx);
-
+        console.log(taulerProx);
     }
 }
 /*
