@@ -64,28 +64,27 @@ function iniciJs() {
             aplicarNormes(i, j,num,num2,tauler,taulerProx);
         }
         //copiarIResetNexGen(num,num2,tauler,taulerProx);
-        //actualitzarTempsreal(num,num2,tauler,taulerProx);
+        actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas);
         console.log(taulerProx);
     }
 }
 
 
-/*
-/*
-function actualitzarTempsreal(num,num2,tauler,taulerProx){
+
+
+function actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas){
 for (var i = 0; i < num; i++) {
+    columnes = lineas[i].getElementsByTagName("td");
             for (var j = 0; j < num2; j++) {
-                var celula = document.getElementsByName(tauler + "[" + i + "]" + "[" + j + "]");
-                if (tauler[i][j] === 0) {
-                    console.log("------>" + celula[0]);
-                    celula[0].setAttribute("checked", "true");
-                } else {
-                    celula.setAttribute("checked", "false");
+                if(tauler[i][j] === 1){
+                    columnes[j].getElementsByTagName("input")[0].checked = true;
+                }else{
+                    columnes[j].getElementsByTagName("input")[0].checked = false;
                 }
             }
         }
 }
-*/
+
 
 function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Ens farà el return de la funció que conta els veins
