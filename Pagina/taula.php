@@ -6,6 +6,7 @@
   <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<h1>El joc de la vida</h1>
 <?php 
    $xGra = $_POST['xGra'];
    $yGra = $_POST['yGra'];
@@ -30,8 +31,8 @@ echo "</tr>";
 echo "</table>";
 echo '<input type="submit" value="Jugar" onclick="iniciJs();" />';
 echo '<input type="submit" value="Auto" onclick="auto();" />';
-echo '<input type="submit" value="Velocitat+" onclick="auto();" />';
-echo '<input type="submit" value="Velocitat-" onclick="auto();" />';
+echo '<input type="submit" value="Velocitat+" onclick="pujarVelocitat();" />';
+echo '<input type="submit" value="Velocitat-" onclick="baixarVelocitat();" />';
 ?>
 </body>
 </html>

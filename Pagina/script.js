@@ -99,7 +99,9 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
       //  }
     }
 //Funció per poder carregar la nostre funció automaticament-
-    function auto(){
+
+/*** Funció de Velocitat*/
+function auto(){
     setInterval(function(){iniciJs();},500);
 }
 function pujarVelocitat(){
