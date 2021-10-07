@@ -63,21 +63,10 @@ for (let i = 0; i < num; i++) {
             }
         }
 }
-function esborrar() {
-    function esborrarL(num, num2, tauler, taulerProx, columnes, lineas) {
-        for (let i = 0; i < num; i++) {
-            columnes = lineas[i].getElementsByTagName("td");
-            for (let j = 0; j < num2; j++) {
-                columnes[j].getElementsByTagName("input")[0].checked = false;
-                tauler[i][j] = 0;
-                taulerProx[i][j] = 0;
-            }
-        }
-    }
-}
+
 function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Ens farà el return de la funció que conta els veins
-    const numVeins = countVecinasVivasDeCeldaMuerta(num, num2, linies, columnes, tauler, taulerProx);
+    const numVeins = countVeins(num, num2, linies, columnes, tauler, taulerProx);
     //Si la cel·lula esta viva, i te menys de 2 o 3 veins aquesta mor i si té exactament 3 o 2 cel·lules és manté en vida
     if (tauler[num][num2] === 1) {
         if (numVeins < 2 || numVeins > 3) {
@@ -111,8 +100,10 @@ function baixarVelocitat(){
 
 
 
-        //Necessito el numero original de lineas i columnes per la següent condició
-function countVecinasVivasDeCeldaMuerta(num, num2,linia,columna,tauler) {
+        /*Aqui el que fem es bàsicament agafant la totes les posicions que estan al voltant de la ce·la sel·leccionada
+        . Ara cada una de les coincidencies, ens sumarà 1 al nostre contador.
+        */
+function countVeins(num, num2,linia,columna,tauler) {
     let count = 0;
     if (num-1 >= 0) {
         if (tauler[num-1][num2] === 1) count++;
@@ -141,7 +132,7 @@ function countVecinasVivasDeCeldaMuerta(num, num2,linia,columna,tauler) {
     return count;
 }
 
-/*
+/* Proves
 function countVecinasMuertasDeCeldaViva(num, num2,linia,columna,tauler) {
     var count = 0;
     if (num-1 >= 0) {
