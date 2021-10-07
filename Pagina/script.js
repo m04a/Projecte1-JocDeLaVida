@@ -109,7 +109,7 @@ function auto(){
 
 }
 function autoStop(){
-    clearInterval(interval);
+    clearTimeout(interval);
 }
 function pujarVelocitat(){
     velocitat= velocitat-50;
