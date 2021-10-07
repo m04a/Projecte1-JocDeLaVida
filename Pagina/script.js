@@ -112,10 +112,16 @@ function autoStop(){
     clearInterval(interval);
 }
 function pujarVelocitat(){
+    clearInterval(interval);
     velocitat= velocitat-50;
+    interval = setInterval(iniciJs, velocitat);
+
 }
 function baixarVelocitat(){
+    clearInterval(interval);
     velocitat= velocitat+50;
+    interval = setInterval(iniciJs, velocitat);
+
 }
 /*
 *var running = null;
