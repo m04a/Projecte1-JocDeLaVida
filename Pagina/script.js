@@ -67,6 +67,7 @@ function copiarIResetNexGen(num,num2,tauler,taulerProx){
               taulerProx[i][j] = 0;
           }
       }
+ console.log(tauler);
  console.log(taulerProx);
 }
 /*
