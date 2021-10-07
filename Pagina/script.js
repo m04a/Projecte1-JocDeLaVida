@@ -34,19 +34,6 @@ function iniciJs() {
         }
     }
 
-    /*function copiarIResetNexGen(num,num2,tauler,taulerProx){
-        console.log(num);
-        console.log(num2);
-        for (let i = 0; i < num; i++) {
-            for (let j = 0; j < num2; j++) {
-                tauler[i][j] = taulerProx[i][j];
-                taulerProx[i][j] = 0;
-            }
-        }
-
-    }
-*/
-//Necessitem recorre un altre cop els nostres arrays.
 /**
  * SIGNIFICAT DE FUNCIONS $RESUMIT
  * aplicarNormes-> Contem els veins i depenent dels veins en la següent generació desapareixen
@@ -62,7 +49,6 @@ function iniciJs() {
         for (j = 0; j < num2; j++) {
             aplicarNormes(i, j,num,num2,tauler,taulerProx);
         }
-        //copiarIResetNexGen(num,num2,tauler,taulerProx);
         actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas);
         console.log(tauler)
         console.log(taulerProx);
@@ -77,7 +63,14 @@ for (let i = 0; i < num; i++) {
             }
         }
 }
-
+function esborrar(num,num2,tauler,taulerProx,columnes,lineas){
+    for (let i = 0; i < num; i++) {
+        columnes = lineas[i].getElementsByTagName("td");
+        for (let j = 0; j < num2; j++) {
+            columnes[j].getElementsByTagName("input")[0].checked = false;
+        }
+    }
+}
 
 function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Ens farà el return de la funció que conta els veins
