@@ -68,6 +68,8 @@ function esborrar(num,num2,tauler,taulerProx,columnes,lineas){
         columnes = lineas[i].getElementsByTagName("td");
         for (let j = 0; j < num2; j++) {
             columnes[j].getElementsByTagName("input")[0].checked = false;
+            tauler[i][j] = 0;
+            taulerProx[i][j] = 0;
         }
     }
 }
