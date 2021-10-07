@@ -33,7 +33,7 @@ echo "</table>";
 /*Fem els botons que cridarán les funcions del joc*/
 echo '<input type="submit" value="Jugar" onclick="iniciJs();" />';
 echo '<input type="submit" value="Auto" onclick="auto();" />';
-echo '<input type="submit" value="PausarJoc" onclick="esborrar();" />';
+echo '<input type="submit" value="PausarJoc" onclick="autoStop();" />';
 echo '<input type="submit" value="Velocitat+" onclick="pujarVelocitat();" />';
 echo '<input type="submit" value="Velocitat-" onclick="baixarVelocitat();" />';
 
