@@ -63,17 +63,18 @@ for (let i = 0; i < num; i++) {
             }
         }
 }
-function esborrar(num,num2,tauler,taulerProx,columnes,lineas){
-    for (let i = 0; i < num; i++) {
-        columnes = lineas[i].getElementsByTagName("td");
-        for (let j = 0; j < num2; j++) {
-            columnes[j].getElementsByTagName("input")[0].checked = false;
-            tauler[i][j] = 0;
-            taulerProx[i][j] = 0;
+function esborrar() {
+    function esborrarL(num, num2, tauler, taulerProx, columnes, lineas) {
+        for (let i = 0; i < num; i++) {
+            columnes = lineas[i].getElementsByTagName("td");
+            for (let j = 0; j < num2; j++) {
+                columnes[j].getElementsByTagName("input")[0].checked = false;
+                tauler[i][j] = 0;
+                taulerProx[i][j] = 0;
+            }
         }
     }
 }
-
 function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Ens farà el return de la funció que conta els veins
     const numVeins = countVecinasVivasDeCeldaMuerta(num, num2, linies, columnes, tauler, taulerProx);
