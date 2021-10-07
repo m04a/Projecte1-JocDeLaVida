@@ -30,6 +30,8 @@ echo "</tr>";
 echo "</table>";
 echo '<input type="submit" value="Jugar" onclick="iniciJs();" />';
 echo '<input type="submit" value="Auto" onclick="auto();" />';
+echo '<input type="submit" value="Velocitat+" onclick="auto();" />';
+echo '<input type="submit" value="Velocitat-" onclick="auto();" />';
 ?>
 </body>
 </html>

@@ -69,9 +69,6 @@ function iniciJs() {
     }
 }
 
-
-
-
 function actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas){
 for (var i = 0; i < num; i++) {
     columnes = lineas[i].getElementsByTagName("td");
@@ -101,8 +98,15 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
             }
       //  }
     }
-function auto(){
+//Funció per poder carregar la nostre funció automaticament-
+    function auto(){
     setInterval(function(){iniciJs();},500);
+}
+function pujarVelocitat(){
+
+}
+function baixarVelocitat(){
+
 }
         //Necessito el numero original de lineas i columnes per la següent condició
 function countVecinasVivasDeCeldaMuerta(num, num2,linia,columna,tauler) {
