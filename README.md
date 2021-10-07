@@ -52,20 +52,15 @@ Has de instal·lar el PHP per poder executar-ho
 
 ### Instalació
 
-1. Clone el repositori
+1. Clonar el repositori
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
   
-   ```sh
-   npm install
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- USAGE EXAMPLES -->
+
 ## Normes
 
 L'univers del joc de la vida és una malla ortogonal bidimensional infinita (exemple: una taula o matriu), de cel·les individuals, cadascuna de les quals té dos estats possibles: viu o mort. Cada cel·la interacciona amb els seus vuit veïns, que són les cel·les a què està connectada horitzontalment, verticalment o diagonalment. A cada unitat de temps, es donen les següents transicions:
@@ -79,18 +74,16 @@ Aquest patró inicial constitueix la llavor del sistema. La primera generació �
 
 
 
-<!-- CONTACT -->
+
 ## Contacte
 
 Mohamed Bourarach - mohamedbourarach@gmail.com 
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+Enllaç del meu projecte: [https://github.com/moha2001B/Projecte1-JocDeLaVida](https://github.com/moha2001B/Projecte1-JocDeLaVida)
 
 
 
-<!-- ACKNOWLEDGMENTS -->
+
 ## Agraïments
 
 Graciès a fontawesome per fer la vida més fàcil
