@@ -2,14 +2,14 @@ function iniciJs() {
     let i;
     let j;
     //Obtenim els tr i els td en un array. Les columnes es trobaràn amb una formula inversa del àrea.
-    var lineas = document.getElementsByTagName("tr");
-    var columnes = document.getElementsByTagName("td");
-    var num = lineas.length;
-    var num2 = columnes.length;
+    const lineas = document.getElementsByTagName("tr");
+    let columnes = document.getElementsByTagName("td");
+    const num = lineas.length;
+    let num2 = columnes.length;
     num2 = num2 / num;
     //Creem el array simple i fem la següent generació. S'ha asignat el valor de les lineas.
-    var tauler = new Array(num);
-    var taulerProx = new Array(num);
+    const tauler = new Array(num);
+    const taulerProx = new Array(num);
     console.log(num);
     //Asignem el numero de columnes per cada fila. Basicament creem un array bidimensional
     for (i = 0; i < num; i++) {
@@ -70,9 +70,9 @@ function iniciJs() {
 }
 
 function actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas){
-for (var i = 0; i < num; i++) {
+for (let i = 0; i < num; i++) {
     columnes = lineas[i].getElementsByTagName("td");
-            for (var j = 0; j < num2; j++) {
+            for (let j = 0; j < num2; j++) {
                 columnes[j].getElementsByTagName("input")[0].checked = taulerProx[i][j] === 1;
             }
         }
@@ -81,7 +81,7 @@ for (var i = 0; i < num; i++) {
 
 function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
 //Ens farà el return de la funció que conta els veins
-    var numVeins = countVecinasVivasDeCeldaMuerta(num, num2,linies,columnes,tauler,taulerProx);
+    const numVeins = countVecinasVivasDeCeldaMuerta(num, num2, linies, columnes, tauler, taulerProx);
     //Si la cel·lula esta viva, i te menys de 2 o 3 veins aquesta mor i si té exactament 3 o 2 cel·lules és manté en vida
     if (tauler[num][num2] === 1) {
         if (numVeins < 2 || numVeins > 3) {
@@ -107,11 +107,9 @@ function auto(){
     setInterval(function(){iniciJs();},velocitat);
 }
 function pujarVelocitat(){
-    if (velocitat>100)
     velocitat= velocitat-50;
 }
 function baixarVelocitat(){
-if (velocitat<100)
     velocitat= velocitat+50;
 }
 
@@ -119,7 +117,7 @@ if (velocitat<100)
 
         //Necessito el numero original de lineas i columnes per la següent condició
 function countVecinasVivasDeCeldaMuerta(num, num2,linia,columna,tauler) {
-    var count = 0;
+    let count = 0;
     if (num-1 >= 0) {
         if (tauler[num-1][num2] === 1) count++;
     }
