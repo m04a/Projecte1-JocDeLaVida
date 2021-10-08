@@ -124,7 +124,16 @@ function baixarVelocitat(){
     interval = setInterval(iniciJs, velocitat);
 
 }
-
+/*function netejar(num, num2,lineas,columnes){
+    clearInterval(interval);
+    for (let i = 0; i < num; i++) {
+        columnes = lineas[i].getElementsByTagName("td");
+        for (let j = 0; j < num2; j++) {
+            columnes[j].getElementsByTagName("input")[0].checked = false;
+        }
+    }
+}
+/*
 /*Aqui el que fem es bàsicament agafant la totes les posicions que estan al voltant de la ce·la sel·leccionada
 . Ara cada una de les coincidencies, ens sumarà 1 al nostre contador.
 */
