@@ -36,17 +36,18 @@ function iniciJs() {
         }
     }
     netejar(num, num2,lineas,columnes)
-    //A partir de la linia seleccionada tornem tots els td al array de les columnes. Després recorrem totes les posicions,
-    //revisant els inputs de cada columna mirem si esta marcada. Si aquesta està marcada el valor del tauler[i][j] canviara a 1;
-    for (i = 0; i < num; i++) {
-        columnes = lineas[i].getElementsByTagName("td");
-        for (j = 0; j < num2; j++) {
-            if (columnes[j].getElementsByTagName("input")[0].checked) {
-                tauler[i][j] = 1;
+    {
+        //A partir de la linia seleccionada tornem tots els td al array de les columnes. Després recorrem totes les posicions,
+        //revisant els inputs de cada columna mirem si esta marcada. Si aquesta està marcada el valor del tauler[i][j] canviara a 1;
+        for (i = 0; i < num; i++) {
+            columnes = lineas[i].getElementsByTagName("td");
+            for (j = 0; j < num2; j++) {
+                if (columnes[j].getElementsByTagName("input")[0].checked) {
+                    tauler[i][j] = 1;
+                }
             }
         }
     }
-
 /**
  * SIGNIFICAT DE FUNCIONS $RESUMIT
  * aplicarNormes-> Contem els veins i depenent dels veins en la següent generació desapareixen
