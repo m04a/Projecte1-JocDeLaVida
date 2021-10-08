@@ -29,8 +29,8 @@ echo '<input type="hidden" name="yGra" value="'.$yGra.'">';
 //Aqui fem una comprobació de que les dades introduides són valides. Si no ho són llavors tornem al formulari
 if ($xGra < 3 || $xGra == null || $yGra < 3 || $yGra == null || $yGra > 40 || $xGra > 20){
 echo "<p class='error'>Error: Si us plau, revisa les dades introduïdes recorda que la X (No pot ser més gran de 20 ni més petita que 4) i la Y (No pot ser més gran de 40 ni més petita que 4). Es farà una redirecció en 10 segons... O clic a en 'Tornar al formulari'</p>";
-echo "<a id='myLink' href='Projecte1.html' >Tornar al formulari</a>";
-header('Refresh: 10; Projecte1.html');
+echo "<a id='myLink' href='Projecte1.php' >Tornar al formulari</a>";
+header('Refresh: 10; Projecte1.php');
 }
 //Si no crea la taula. Amb les posicions corresponents. També li assignem un nom per observar la taula millor.
 else{
