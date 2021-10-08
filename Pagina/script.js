@@ -107,7 +107,8 @@ function auto(){
     interval = setInterval(iniciJs, velocitat);
 }
 //Netejem el interval, és a dir para de executar el codi
-function autoStop(){
+function
+autoStop(){
     clearInterval(interval);
 }
 //Fem una neteja del interval i pujem la velocitat
