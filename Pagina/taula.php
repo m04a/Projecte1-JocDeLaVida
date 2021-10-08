@@ -36,6 +36,7 @@ echo '<input type="submit" value="Auto" onclick="auto();" />';
 echo '<input type="submit" value="Pausar" onclick="autoStop();" />';
 echo '<input type="submit" value="Velocitat+" onclick="pujarVelocitat();" />';
 echo '<input type="submit" value="Velocitat-" onclick="baixarVelocitat();" />';
+echo '<input type="submit" value="Velocitat-" onclick="netejar();" />';
 
 ?>
 </body>

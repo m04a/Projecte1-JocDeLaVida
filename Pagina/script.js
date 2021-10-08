@@ -35,6 +35,7 @@ function iniciJs() {
             taulerProx[i][j] = 0;
         }
     }
+    netejar(num, num2,lineas,columnes)
     //A partir de la linia seleccionada tornem tots els td al array de les columnes. Després recorrem totes les posicions,
     //revisant els inputs de cada columna mirem si esta marcada. Si aquesta està marcada el valor del tauler[i][j] canviara a 1;
     for (i = 0; i < num; i++) {
@@ -124,29 +125,15 @@ function baixarVelocitat(){
     interval = setInterval(iniciJs, velocitat);
 
 }
-/*
-Proves interesants
-*var running = null;
-
-function auto(){
-    if (running) {
-        clearInterval(running);
-        running = null;
-    } else {
-        running = setInterval( velocitat);
-    }
+function netejar(num, num2,lineas,columnes){
+    clearInterval(interval);
+    for (let i = 0; i < num; i++) {
+        columnes = lineas[i].getElementsByTagName("td");
+        for (let j = 0; j < num2; j++) {
+            columnes[j].getElementsByTagName("input")[0].checked = false;
+            }
+        }
 }
-function pujarVelocitat(){
-    clearInterval(running);
-    running = setInterval(function(){iniciJs();}, (velocitat=velocitat-25));
-}
-function baixarVelocitat(){
-    clearInterval(running);
-    running = setInterval(function(){iniciJs();}, (velocitat=velocitat+25));
-}
-
-* */
-
 
         /*Aqui el que fem es bàsicament agafant la totes les posicions que estan al voltant de la ce·la sel·leccionada
         . Ara cada una de les coincidencies, ens sumarà 1 al nostre contador.
