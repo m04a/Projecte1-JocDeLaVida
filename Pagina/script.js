@@ -35,30 +35,28 @@ function iniciJs() {
             taulerProx[i][j] = 0;
         }
     }
-    netejar(num, num2,lineas,columnes)
-    {
-        //A partir de la linia seleccionada tornem tots els td al array de les columnes. Després recorrem totes les posicions,
-        //revisant els inputs de cada columna mirem si esta marcada. Si aquesta està marcada el valor del tauler[i][j] canviara a 1;
-        for (i = 0; i < num; i++) {
-            columnes = lineas[i].getElementsByTagName("td");
-            for (j = 0; j < num2; j++) {
-                if (columnes[j].getElementsByTagName("input")[0].checked) {
-                    tauler[i][j] = 1;
-                }
+    //A partir de la linia seleccionada tornem tots els td al array de les columnes. Després recorrem totes les posicions,
+    //revisant els inputs de cada columna mirem si esta marcada. Si aquesta està marcada el valor del tauler[i][j] canviara a 1;
+    for (i = 0; i < num; i++) {
+        columnes = lineas[i].getElementsByTagName("td");
+        for (j = 0; j < num2; j++) {
+            if (columnes[j].getElementsByTagName("input")[0].checked) {
+                tauler[i][j] = 1;
             }
         }
     }
-/**
- * SIGNIFICAT DE FUNCIONS $RESUMIT
- * aplicarNormes-> Contem els veins i depenent dels veins en la següent generació desapareixen
- * copiarIResetNexGen -> Copiem el array pare al fill o viceversa. I fem un reset.
- * actualitzarTempsreal -> A partir si la posició es 1. Canviem el estat del checkbox
-    Li pasarem les parametres següents
+
+    /**
+     * SIGNIFICAT DE FUNCIONS $RESUMIT
+     * aplicarNormes-> Contem els veins i depenent dels veins en la següent generació desapareixen
+     * copiarIResetNexGen -> Copiem el array pare al fill o viceversa. I fem un reset.
+     * actualitzarTempsreal -> A partir si la posició es 1. Canviem el estat del checkbox
+     Li pasarem les parametres següents
      (i,j - Posicions actuals)
      (num,num2 - files i columnes )
      (tauler taulerProx -> Array Pare i Array Fill)
      La funció serà repetida el fins acabar totes les files i columnes
-    * */
+     * */
     for (i = 0; i < num; i++) {
         for (j = 0; j < num2; j++) {
             aplicarNormes(i, j,num,num2,tauler,taulerProx);
@@ -71,12 +69,12 @@ function iniciJs() {
 /*Amb aquesta funció basicament agafem totes les files i comprovem en la nostra taula nova quienes d'aquestes en la següent
 Generació s'han de activar el checkbox corresponent*/
 function actualitzarTempsreal(num,num2,tauler,taulerProx,columnes,lineas){
-for (let i = 0; i < num; i++) {
-    columnes = lineas[i].getElementsByTagName("td");
-            for (let j = 0; j < num2; j++) {
-                columnes[j].getElementsByTagName("input")[0].checked = taulerProx[i][j] === 1;
-            }
+    for (let i = 0; i < num; i++) {
+        columnes = lineas[i].getElementsByTagName("td");
+        for (let j = 0; j < num2; j++) {
+            columnes[j].getElementsByTagName("input")[0].checked = taulerProx[i][j] === 1;
         }
+    }
 }
 
 
@@ -92,13 +90,13 @@ function aplicarNormes(num, num2,linies,columnes,tauler,taulerProx) {
         }
         //Si la cel·lula està morta, i té un numero de veins exacte a 3. Llavors aquesta reviu.
     } else if (tauler[num][num2] === 0) {
-           // if (countVecinasMuertasDeCeldaViva(num, num2,linies,columnes,tauler,taulerProx) === 3) {
-                if (numVeins ===3) {
-                    taulerProx[num][num2] = 1;
-                }
-            }
-      //  }
+        // if (countVecinasMuertasDeCeldaViva(num, num2,linies,columnes,tauler,taulerProx) === 3) {
+        if (numVeins ===3) {
+            taulerProx[num][num2] = 1;
+        }
     }
+    //  }
+}
 //Funció per poder carregar la nostre funció automaticament-
 
 /*** Funció de Velocitat i Parar Joc*/
@@ -126,19 +124,10 @@ function baixarVelocitat(){
     interval = setInterval(iniciJs, velocitat);
 
 }
-function netejar(num, num2,lineas,columnes){
-    clearInterval(interval);
-    for (let i = 0; i < num; i++) {
-        columnes = lineas[i].getElementsByTagName("td");
-        for (let j = 0; j < num2; j++) {
-            columnes[j].getElementsByTagName("input")[0].checked = false;
-            }
-        }
-}
 
-        /*Aqui el que fem es bàsicament agafant la totes les posicions que estan al voltant de la ce·la sel·leccionada
-        . Ara cada una de les coincidencies, ens sumarà 1 al nostre contador.
-        */
+/*Aqui el que fem es bàsicament agafant la totes les posicions que estan al voltant de la ce·la sel·leccionada
+. Ara cada una de les coincidencies, ens sumarà 1 al nostre contador.
+*/
 function countVeins(num, num2,linia,columna,tauler) {
     let count = 0;
     if (num-1 >= 0) {
@@ -198,6 +187,3 @@ function countVecinasMuertasDeCeldaViva(num, num2,linia,columna,tauler) {
     return count;
 }
 */
-
-
-
