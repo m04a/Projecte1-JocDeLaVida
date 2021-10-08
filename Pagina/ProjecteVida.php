@@ -4,6 +4,13 @@
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="script.js"></script>
   <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link rel="icon" href="./imatges/favicon.ico">
+
+  <meta name="description" content="Joc de la Vida.">
+  <meta name="author" content="Mohamed Bourarach">
+
+  <meta property="og:title" content="Joc de la Vida">
+  <meta property="og:type" content="website">
 </head>
 <body>
 
