@@ -21,6 +21,8 @@
 
 $xGra = $_POST['GrandariaX'];
 $yGra = $_POST['GrandariaY'];
+setcookie('GrandariaX',$GrandariaX);
+setcookie('GrandariaY',$GrandariaY);
 echo '<form id="myForm" action="taula.php" method="post">';
 echo '<input type="hidden" name="xGra" value="'.$xGra.'">';
 echo '<input type="hidden" name="yGra" value="'.$yGra.'">';
